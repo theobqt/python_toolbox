@@ -4,7 +4,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name='toolbox',
+    name='atomsk',
     version='0.0.1',
     author='Théo Bequet',
     author_email='theo.bequet@etu.univ-poitiers.fr',
@@ -16,6 +16,6 @@ setuptools.setup(
         "Bug Tracker": "https://github.com/theobqt/python_toolbox/issues"
     },
     license='',
-    packages=['toolbox'],
+    packages=['atomsk'],
     install_requires=['requests'],
 )

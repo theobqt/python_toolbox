@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name='atomsk',
-    version='0.0.3',
+    version='0.0.4',
     author='Théo Bequet',
     author_email='theo.bequet@etu.univ-poitiers.fr',
     description='Toolbox for atomistic simulation',

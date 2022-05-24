@@ -1,1 +1,1 @@
-import atomsk.atomsk
+import atomsk.atomsk as atomsk

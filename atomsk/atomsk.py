@@ -31,9 +31,9 @@ def MergeBoxes(files, destination, rep="",  direction="z", silence=False): # ato
 	if silence != True:
 		print("Merged " + str(files) + " in " + destination)
 
-def AddAtomTetra(startFile, finalFile, a0, boxSize, atom="H", atomCoor=[0, 0, 0], dirx=[1,0,0], diry=[0,1,0], dirz=[0,0,1], dirNeigh=1, silence=False):
+def AddAtomTetra(startFile, finalFile, a0, boxSize, atom="H", atomCoor=[0, 0, 0], dirx=[1,0,0], diry=[0,1,0], dirz=[0,0,1], dirNeigh=1, distFromAtom=1/4 silence=False):
 	CheckAtom(atom)
-	a = a0 / 4
+	a = a0 * distFromAtom
 	# Convert directions to [001] base
 	x, y, z = ConvertDirectionsTo001([dirx, diry, dirz], atomCoor)
 	# Direction from atom
@@ -81,9 +81,9 @@ def AddAtomTetra(startFile, finalFile, a0, boxSize, atom="H", atomCoor=[0, 0, 0]
 	if silence != True:
 		print("Added " + atom + " atom at position " + pos)
 
-def AddAtomOcta(startFile, finalFile, a0, boxSize, atom="H", atomCoor=[0, 0, 0], dirx=[1,0,0], diry=[0,1,0], dirz=[0,0,1], dirNeigh=1, silence=False):
+def AddAtomOcta(startFile, finalFile, a0, boxSize, atom="H", atomCoor=[0, 0, 0], dirx=[1,0,0], diry=[0,1,0], dirz=[0,0,1], dirNeigh=1, distFromAtom=1/2 silence=False):
 	CheckAtom(atom)
-	a = a0 / 2
+	a = a0 * distFromAtom
 	# Convert directions to [001] base
 	x, y, z = ConvertDirectionsTo001([dirx, diry, dirz], atomCoor)
 	# Direction from atom
